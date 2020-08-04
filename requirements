@@ -12,3 +12,6 @@ login page  http://127.0.0.1:8000/login
 signup      http://127.0.0.1:8000/signup
 room        http://127.0.0.1:8000/room
 book        http://127.0.0.1:8000/booking/
+
+admin       http://127.0.0.1:8000/admin/app1/room/     
+you can change availiablity and room price of room
