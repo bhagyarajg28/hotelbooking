@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<a href="{% url 'logout_view' %}">logout</a>
+
+<form action=" " method="post">
+    {% csrf_token %}
+   user: {{ request.user}}
+
+    <label>DATE:
+        <input type="date" name="t1">
+    </label>
+
+    <input type="submit" value="submit">
+</form>
+
+{% for i in list1 %}
+    <center>
+        Room_No:{{ i.room_no }}
+        Date:{{ i.Date }}
+        price:{{ i.price }}
+        {% if i.availability == True %}
+            availability:avaliable
+            <a href="{% url 'booking' id=i.id %}">Book</a>
+        {% else %}
+            availability:Not avaliable
+        {% endif %}
+
+
+
+{#        {%if  i.Date == time.date %}#}
+{#        Time:#}
+{#            {%if time.hour < 11  %}#}
+{#                <a href="{% url 'booking' id=i.id t=11 %}">11:00 AM</a>#}
+{#            {% endif %}#}
+{#            {%if time.hour < 14 %}#}
+{#                <a href="{% url 'booking' id=i.id t=2%}">2:00 PM</a>#}
+{#            {% endif %}#}
+{#            {%if time.hour < 18  %}#}
+{#                 <a href="{% url 'booking' id=i.id t=6%}">6:00 PM</a>#}
+{#            {% endif %}#}
+{#            {%if time.hour < 22 %}#}
+{#                 <a href="{% url 'booking' id=i.id t=9%}">9:00 PM</a><br>#}
+{#            {% endif %}#}
+{#        {% else %}#}
+{#            Time:#}
+{#            <a href="{% url 'booking' id=i.id t=11 %}">11:00 AM</a>#}
+{#            <a href="{% url 'booking' id=i.id t=2%}">2:00 PM</a>#}
+{#            <a href="{% url 'booking' id=i.id t=6%}">6:00 PM</a>#}
+{#            <a href="{% url 'booking' id=i.id t=9%}">9:00 PM</a><br>#}
+{#        {% endif %}#}
+    </center>
+{% endfor %}
+
+
+<body>
+</body>
+
+</html>

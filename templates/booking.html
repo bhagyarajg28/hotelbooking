@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+
+<form action=" " method="post">
+    {% csrf_token %}
+    user:{{ request.user}}<br>
+
+</form>
+
+
+
+{% if b %}
+
+    <center>
+        <h3>
+            Username:{{ b.user}}<br>
+            Room_no:{{b.room_no.room_no}}<br>
+            Date:{{ b.room_no.Date  }}<br>
+            price:{{ b.room_no.price }}<br>
+            {% if  b.room_no.availability == False %}
+            availability:Booked
+        {% else %}
+            availability: avaliable
+        {% endif %}<br>
+
+            ClickHere<a href="{% url 'home' %}">Home</a>
+            ClickHere<a href="{% url 'room' %}">room</a>
+
+        </h3>
+    </center>
+
+{% endif %}
+
+
+
+
+
+
+<body>
+
+</body>
+</html>

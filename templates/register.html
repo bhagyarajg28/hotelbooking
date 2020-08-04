@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <table>
+        <tr>
+    {{ f.as_table }}
+        </tr>
+    </table>
+   <input type="submit" value="Signup" name="submit">
+
+</form>
+<body>
+
+</body>
+</html>

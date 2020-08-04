@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>HOTEL BOOKING</title>
+    <h1>Hotel Booking</h1>
+
+</head>
+<body>
+
+{{request.user}}
+{% if request.user.is_authenticated %}
+    <a href="{% url 'logout_view' %}">logout</a>
+    <a href="{% url 'registration'%}">signup</a>
+    <a href="{% url 'room'%}">RoomBooking</a>
+{% else %}
+    <a href="{% url 'registration'%}">signup</a>
+    <a href="{% url 'loginn'%}">login</a>
+    <a href="{% url 'room'%}">RoomBooking</a>
+
+{% endif %}
+
+
+</body>
+
+</html>
