@@ -1,0 +1,14 @@
+asgiref==3.2.10
+Django==3.0.9
+pytz==2020.1
+sqlparse==0.3.1
+
+
+
+
+
+home page   http://127.0.0.1:8000/
+login page  http://127.0.0.1:8000/login
+signup      http://127.0.0.1:8000/signup
+room        http://127.0.0.1:8000/room
+book        http://127.0.0.1:8000/booking/
